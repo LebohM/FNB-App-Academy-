@@ -141,6 +141,50 @@ a.info-box{
 #info-box-full h3{
     text-align: center;
 }
+/*=================MAIN-ANIMALS INFO-BOX-FULL-WEATHER===================*/
+p img.info-box-weather-icon{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    
+}
+img.info-box-weather-icon{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    float: left;
+   
+}
+h1.info-box-weather-icon{
+    font-size: 65px;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+}
+/*=================MAIN-ANIMALS INFO-BOX-FULL-FEEDBACK===================*/
+input{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: #131313;
+    height: 30px;
 
+}
+textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+     height: 50px;
+}
+a.button{
+    background-color: rgb(52, 111, 92);
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+a.button:hover{
+    background-color: rgb(35, 148, 148);
 
-
+}

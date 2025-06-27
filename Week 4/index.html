@@ -10,6 +10,8 @@
 <body>
     <h1 id="greeting"></h1>
     <p id="paragraph"></p>
+    <p id="para1"></p>
+    <p id="paragraph2"></p>
 
     <script>
         /*
@@ -19,12 +21,16 @@
         var text1;
         var text2;
         var text3;
-        text1 = "Hello World";
-        text2 = "Js is Fun";
+        text1 = "Hello Everyone";
+        text2 = "Js is Fun,";
         text3 = "It Is Owesome";
+        var num1 = 7;
+        var num2 = 15;
+        document.getElementById("greeting").innerHTML=(text1);
+        document.getElementById("paragraph").innerHTML=("Welcome to the blog! "+ text2+" "+ text3);
+        document.getElementById("para1").innerHTML=(num1 + num2);
+        document.getElementById("paragraph2").innerHTML=("The product of num1 x num2 is "+ num1 * num2);
 
-         document.getElementById("greeting").innerHTML=( text1);
-        document.getElementById("paragraph").innerHTML=("Welcome to the blog!"+ text2+ text3);
     </script>
 </body>
 </html>

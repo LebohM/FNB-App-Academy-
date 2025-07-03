@@ -11,7 +11,9 @@
     <h1 id = "heading" onclick="ChangeText()">Hellow There</h1>
     <p id="addNums"></p>
     <script>
-        AddNumbers(6,18);
+
+        document.getElementById("addNums").innerHTML = AddNumbers(6,48);
+
         function ChangeText()
         {
             if(document.getElementById("heading").innerHTML == 'Hellow There')
@@ -25,7 +27,8 @@
         
         function AddNumbers(num1,num2)
         {
-            document.getElementById("addNums").innerHTML= num1 + num2;
+            //document.getElementById("addNums").innerHTML= num1 + num2;
+            return num1 + num2;
         }
     </script>
 </body>

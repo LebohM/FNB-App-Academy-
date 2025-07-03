@@ -9,8 +9,9 @@
    <!--<h1 onclick="if(this.innerHTML == 'Click Meeee'){this.innerHTML == 'Hellow There'}else {this.innerHTML= 'Click Meeee'}">Click Meeee</h1>-->
     
     <h1 id = "heading" onclick="ChangeText()">Hellow There</h1>
-
+    <p id="addNums"></p>
     <script>
+        AddNumbers(6,18);
         function ChangeText()
         {
             if(document.getElementById("heading").innerHTML == 'Hellow There')
@@ -20,7 +21,12 @@
             else{
                document.getElementById("heading").innerHTML = 'Hellow There'
             }
-        }   
+        } 
+        
+        function AddNumbers(num1,num2)
+        {
+            document.getElementById("addNums").innerHTML= num1 + num2;
+        }
     </script>
 </body>
 </html>

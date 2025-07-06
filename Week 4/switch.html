@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header id="header" >
+        <nav id="nav-bar-top">
+        <a href="index.html">Home</a>   
+        <a href="login.html">Login</a>
+        <a href="password.html">password</a>
+        <a href="functions.html">Functions</a>
+        <a href="StringsAndNums.html">Strings & Numbers</a>
+    </nav>
+    </header>  
+
+<div id="main-home">
     
     <select id="weather">
         <option value="sunny">Sunny</option>
@@ -16,6 +28,8 @@
     </select><br>
     <a onclick="ButtonPressed()" href="#">Check</a>
     <p id="OutputText">Weather advice</p>
+</div>
+    
     <script>
         function ButtonPressed(){
             var SelectedWeather = document.getElementById("weather").value

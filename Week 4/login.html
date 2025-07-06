@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header id="header" >
+        <nav id="nav-bar-top">  
+        <a href="index.html">Home</a>
+        <a href="password.html">password</a>
+        <a href="functions.html">Functions</a>
+        <a href="switch.html">Switch</a>
+        <a href="StringsAndNums.html">Strings & Numbers</a>
+    </nav>
+    </header>  
+
+<div id="main-home">
+
     <form>
         <label for="UsernameInput">Enter Username:</label><input type="text" id="UsernameInput"/><br/> <br>
         <label for="PasswordInput">Enter Password:</label><input type="password" id="PasswordInput"/><br/>
@@ -14,6 +27,7 @@
 
         <a onclick="verifyUser()" href="#">Log In</a>
     </form>
+</div>
 
     <script>
         function verifyUser(){

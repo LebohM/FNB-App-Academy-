@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funtions</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header id="header" >
+        <nav id="nav-bar-top"> 
+        <a href="index.html">Home</a> 
+        <a href="login.html">Login</a>
+        <a href="password.html">password</a>
+        <a href="switch.html">Switch</a>
+        <a href="StringsAndNums.html">Strings & Numbers</a>
+    </nav>
+    </header>  
+
+<div id="main-home">
    <!--<h1 onclick="if(this.innerHTML == 'Click Meeee'){this.innerHTML == 'Hellow There'}else {this.innerHTML= 'Click Meeee'}">Click Meeee</h1>-->
     
     <h1 id = "heading" onclick="ChangeText()">Hellow There</h1>
     <p id="addNums"></p>
     <p id="variable"></p>
+
+</div>
     <script>
 
         document.getElementById("addNums").innerHTML = AddNumbers(6,48);

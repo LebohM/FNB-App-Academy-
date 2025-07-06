@@ -10,6 +10,7 @@
     
     <h1 id = "heading" onclick="ChangeText()">Hellow There</h1>
     <p id="addNums"></p>
+    <p id="variable"></p>
     <script>
 
         document.getElementById("addNums").innerHTML = AddNumbers(6,48);
@@ -30,6 +31,15 @@
             //document.getElementById("addNums").innerHTML= num1 + num2;
             return num1 + num2;
         }
+
+        //variables 
+        var varInthefunction = 89;
+        SomeVarFunction();  
+        function SomeVarFunction(){
+            
+            document.getElementById("variable").innerHTML = varInthefunction;
+        }
+
     </script>
 </body>
 </html>

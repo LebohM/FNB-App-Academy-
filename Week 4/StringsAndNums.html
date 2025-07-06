@@ -7,10 +7,30 @@
 </head>
 <body>
     <p id="outputText"></p>
-
+    <p id="outputText1"></p>
+    <p id="outputText2"></p>
+    <p id="outputText3"></p>
 
     <script>
+        var text1 = "14";
+        var text2 = "7";
+
+        /*document.getElementById("outputText").innerHTML= text1 + text2;
+        document.getElementById("outputText1").innerHTML= text1 - text2;
+        document.getElementById("outputText2").innerHTML= text1 * text2;
+        document.getElementById("outputText3").innerHTML= text1 / text2;*/
         
+        var num1 = StringToNum(text1);
+        var num2 = StringToNum(text2);
+
+        document.getElementById("outputText").innerHTML= num1 + num2;
+        document.getElementById("outputText1").innerHTML= num1 * num2;
+        document.getElementById("outputText2").innerHTML= num1 - num2;
+        document.getElementById("outputText3").innerHTML= num1 / num2;
+        
+        function StringToNum(text){
+            return parseInt(text);
+        }
     </script>
 </body>
 </html>

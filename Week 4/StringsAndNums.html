@@ -24,6 +24,7 @@
     <p id="outputText1"></p>
     <p id="outputText2"></p>
     <p id="outputText3"></p>
+    <p id="errortext"></p>
 </div>
 
     <script>
@@ -38,10 +39,17 @@
         var num1 = StringToNum(text1);
         var num2 = StringToNum(text2);
 
-        document.getElementById("outputText").innerHTML= num1 + num2;
+        if (isNaN(num1) || isNaN(num2))
+        {
+            document.getElementById("errortext").innerHTML = "Please enter valid numbers, try again..."
+        }
+        else{
+            document.getElementById("outputText").innerHTML= num1 + num2;
         document.getElementById("outputText1").innerHTML= num1 * num2;
         document.getElementById("outputText2").innerHTML= num1 - num2;
         document.getElementById("outputText3").innerHTML= num1 / num2;
+        }
+        
         
         function StringToNum(text){
             return parseInt(text);

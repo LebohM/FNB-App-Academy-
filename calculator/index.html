@@ -4,29 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
+    <table border="1">
+
+        <td colspan="4">
+            <input type="text" id="InputBox">
+        </td>
+
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td> 
-            <td>x</td>
+            <td class="Operatoe-Btn" onclick="OperatorBtnPressed('%')">%</td>
+            <td>X^2</td>
+            <td class="C-Btn" onclick="BtnCPressed()">C</td> 
+            <td onclick="OperatorBtnPressed('/')">/</td>
         </tr>
 
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td> 
-            <td>+</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(7)">7</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(8)">8</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(9)">9</td>
+            <td class="Operatoe-Btn" onclick="OperatorBtnPressed('*')">x</td>
         </tr>
 
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td> 
-            <td>-</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(4)">4</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(5)">5</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(6)">6</td> 
+            <td class="Operatoe-Btn" onclick="OperatorBtnPressed('-')">-</td>
+        </tr>
+
+        <tr>
+            <td class="Number-Btn" onclick="numberBtnPressed(1)">1</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(2)">2</td>
+            <td class="Number-Btn" onclick="numberBtnPressed(3)">3</td> 
+            <td class="Operatoe-Btn" onclick="OperatorBtnPressed('+')">+</td>
+        </tr>
+
+        <tr>
+             <td>-/+</td>
+            <td onclick="numberBtnPressed(0)">0</td>
+            <td>,</td>
+            <td onclick="EqualsBtnPressed()">=</td>
         </tr>
     </table>
+
+    <script>
+        
+        var newLine = true;//determines if the next thing a user input should be on anew line
+        
+        //Event handler for when any number is pressed
+        function numberBtnPressed(button)
+        {   
+            if(newLine){
+                document.getElementById("InputBox").value = button;
+                newLine = false;
+            }
+            else{
+                var currentNum = document.getElementById("InputBox").value
+                document.getElementById("InputBox").value = currentNum + button;
+            }
+        }
+
+        //event handler for the clear button
+        function BtnCPressed()
+        {
+           document.getElementById("InputBox").value = "";
+           newLine = true;
+        }
+
+        //Event handler for the operators
+        var num1;
+        var CurrentOperator;
+
+        function OperatorBtnPressed(operator){
+            CurrentOperator = operator;
+            num1 = parseInt(document.getElementById("InputBox").value);
+            newLine = true;
+        }
+
+        //Event handler for the equal sign
+        function EqualsBtnPressed()
+        {
+            var num2 = parseInt(document.getElementById("InputBox").value);
+            var total; 
+
+            switch(CurrentOperator)
+            {
+                case "+":
+                    total = num1 + num2;
+                    break;
+
+                case "-":
+                    total = num1 - num2;
+                    break;
+                
+                case "/":
+                    total = num1 / num2;
+                    break;
+
+                case "*":
+                    total = num1 * num2;
+                    break;
+
+                case "%":
+                     total = num1 / 100;
+                     break;
+
+            }
+            document.getElementById("InputBox").value = total;
+        }
+    </script>
 </body>
 </html>

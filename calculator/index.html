@@ -16,7 +16,7 @@
         <tr>
              <td class="C-Btn" onclick="BtnCPressed()">C</td> 
             <td class="Operatoe-Btn" onclick="OperatorBtnPressed('%')">%</td>
-            <td class="Operatoe-Btn">X^2</td>
+            <td class="Operatoe-Btn" onclick="OperatorBtnPressed('X^2')">X^2</td>
             <td class="Operatoe-Btn" onclick="OperatorBtnPressed('/')">/</td>
         </tr>
 
@@ -111,6 +111,8 @@
                      total = num1 / 100;
                      break;
 
+                case "X^2":
+                    total = num1 * num1;
             }
             document.getElementById("InputBox").value = total;
         }

@@ -25,18 +25,29 @@ td{
 }
 
 .Operatoe-Btn{
- background-color: #ff9e06;
+ background-color: #10b2b4;
+  border-radius: 50px;
  
 }
 .Operatoe-Btn:hover{
-    background-color: #b8925b; 
+    background-color: #0ac6b9; 
 }
 
 .C-Btn{
     background-color: #656165;
+    border-radius: 50px;
+}
+
+.C-Btn:hover{
+    background-color: #293a3a;
+   
 }
 
 .Number-Btn{
     background-color: #807e80;
+    border-radius: 50px;
 }
 
+.Number-Btn:hover{
+   background-color: #293a3a;
+}

@@ -6,18 +6,29 @@
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
-<body>
+<body onload ="GetContacts()">
     <div class="home-main-div"> contents loading...
         <img src="" alt="">
         <label for=""></label>
     </div>
+
+    <button>Refresh</button>
 
      <a href="addContact.html">
         <button>Add Contact</button>
     </a>
     <script src="./config.js"></script>
     <script>
-
+        function GetContacts(){
+            fetch(rootPath + "controller/get-contacts/")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                //displayOutput(data);
+                console.log(data);
+            })
+        }
     </script>
 </body>
 </html>
